@@ -19,31 +19,48 @@ class _AppBottomNavigationBarState extends State<AppBottomNavigationBar> {
     setState(() {
       _selectedIndex = index;
     });
+    print(_selectedIndex);
   }
 
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      currentIndex: 0,
+      type: BottomNavigationBarType.fixed,
+      currentIndex: _selectedIndex,
       iconSize: SizeManger.s14,
       onTap: _onItemTapped,
-      selectedItemColor: ColorManager.kSoftWhiteBackgroundColor,
+      selectedItemColor: ColorManager.kPrimaryColor,
       unselectedItemColor: ColorManager.kDisableColor,
+      elevation: 0,
       items: [
         BottomNavigationBarItem(
-          icon: SvgPicture.asset(AssetsManager.home),
+          icon: SvgPicture.asset(
+            AssetsManager.home,
+            color: _selectedIndex == 0
+                ? ColorManager.kPrimaryColor
+                : ColorManager.kDisableColor,
+          ),
           label: 'Home',
         ),
         BottomNavigationBarItem(
-          icon: SvgPicture.asset(AssetsManager.menu),
+          icon: SvgPicture.asset(AssetsManager.menu,
+              color: _selectedIndex == 1
+                  ? ColorManager.kPrimaryColor
+                  : ColorManager.kDisableColor),
           label: 'Menu',
         ),
         BottomNavigationBarItem(
-          icon: SvgPicture.asset(AssetsManager.order),
+          icon: SvgPicture.asset(AssetsManager.order,
+              color: _selectedIndex == 2
+                  ? ColorManager.kPrimaryColor
+                  : ColorManager.kDisableColor),
           label: 'Order',
         ),
         BottomNavigationBarItem(
-          icon: SvgPicture.asset(AssetsManager.reward),
+          icon: SvgPicture.asset(AssetsManager.reward,
+              color: ColorManager.kShadeColor),
+          activeIcon: SvgPicture.asset(AssetsManager.reward,
+              color: ColorManager.kPrimaryColor),
           label: 'Rewards',
         ),
       ],

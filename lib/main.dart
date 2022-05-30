@@ -1,4 +1,7 @@
+import 'package:coffee_city/presentation/home/home_view.dart';
 import 'package:flutter/material.dart';
+
+import 'presentation/resource/route_manager.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      // onGenerateRoute:  RouteGenerator.getRoute,
+      home: const HomeView(),
     );
   }
 }
