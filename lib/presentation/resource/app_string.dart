@@ -55,4 +55,6 @@ class AppBottomNavigationBarString {
 
 class HomeString {
   static const String favorite = 'Your favorite';
+  static const String today = 'Top today';
+  static const String favorites = 'your favorites';
 }

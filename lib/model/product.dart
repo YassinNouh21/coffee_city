@@ -8,7 +8,7 @@ class Product {
   final String category;
   final bool isOnDeal;
 
-  Product({
+  const Product({
     required this.id,
     required this.name,
     required this.description,

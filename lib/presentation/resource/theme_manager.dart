@@ -18,15 +18,16 @@ ThemeData getApplicationTheme(context) {
       ),
       // App bar theme
       appBarTheme: AppBarTheme(
-          centerTitle: true,
-          color: Colors.transparent,
-          elevation: 0,
-          iconTheme:
-              const IconThemeData(color: Colors.black, size: SizeManger.s25),
-          titleTextStyle: getRegularStyle(
-              color: Colors.black,
-              fontSize: FontSize.s16,
-              fontFamily: FontNameManger.poppins)),
+        centerTitle: true,
+        color: Colors.transparent,
+        elevation: 0,
+        iconTheme:
+            const IconThemeData(color: Colors.black, size: SizeManger.s25),
+        titleTextStyle: getRegularStyle(
+            color: Colors.black,
+            fontSize: FontSize.s16,
+            fontFamily: FontNameManger.poppins),
+      ),
       // Button theme
       buttonTheme: ButtonThemeData(
         shape: const StadiumBorder(),
@@ -90,6 +91,5 @@ ThemeData getApplicationTheme(context) {
         focusColor: ColorManager.kUnderLineColor,
         hoverColor: ColorManager.kUnderLineColor,
         fillColor: ColorManager.kUnderLineColor,
-      )
-      );
+      ));
 }

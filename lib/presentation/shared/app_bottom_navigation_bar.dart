@@ -34,26 +34,24 @@ class _AppBottomNavigationBarState extends State<AppBottomNavigationBar> {
       elevation: 0,
       items: [
         BottomNavigationBarItem(
-          icon: SvgPicture.asset(
-            AssetsManager.home,
-            color: _selectedIndex == 0
-                ? ColorManager.kPrimaryColor
-                : ColorManager.kDisableColor,
-          ),
+          icon: SvgPicture.asset(AssetsManager.home,
+              color: ColorManager.kShadeColor),
+          activeIcon: SvgPicture.asset(AssetsManager.home,
+              color: ColorManager.kPrimaryColor),
           label: 'Home',
         ),
         BottomNavigationBarItem(
           icon: SvgPicture.asset(AssetsManager.menu,
-              color: _selectedIndex == 1
-                  ? ColorManager.kPrimaryColor
-                  : ColorManager.kDisableColor),
+              color: ColorManager.kShadeColor),
+          activeIcon: SvgPicture.asset(AssetsManager.menu,
+              color: ColorManager.kPrimaryColor),
           label: 'Menu',
         ),
         BottomNavigationBarItem(
           icon: SvgPicture.asset(AssetsManager.order,
-              color: _selectedIndex == 2
-                  ? ColorManager.kPrimaryColor
-                  : ColorManager.kDisableColor),
+              color: ColorManager.kShadeColor),
+          activeIcon: SvgPicture.asset(AssetsManager.order,
+              color: ColorManager.kPrimaryColor),
           label: 'Order',
         ),
         BottomNavigationBarItem(

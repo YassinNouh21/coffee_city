@@ -14,12 +14,16 @@ class HomeAppBar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: const [
             Text(
               'Good Morning',
+              textAlign: TextAlign.left,
             ),
             Text(
               'John Doe',
+              textAlign: TextAlign.left,
+
             ),
           ],
         ),
@@ -42,10 +46,10 @@ class HomeAppBar extends StatelessWidget {
               icon: SvgPicture.asset(
                 AssetsManager.userProfile,
                 color: ColorManager.kPrimaryColor,
-                height: SizeManger.s18,
-                width: SizeManger.s18,
+                height: SizeManger.s32,
+                width: SizeManger.s32,
               ),
-              padding:  EdgeInsets.zero,
+              padding: const EdgeInsets.only(top: SizeManger.s8),
             )
           ],
         )

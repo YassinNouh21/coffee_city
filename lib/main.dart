@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // onGenerateRoute:  RouteGenerator.getRoute,
-      home: const HomeView(),
+      home:  HomeView(),
     );
   }
 }
